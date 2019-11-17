@@ -12,9 +12,9 @@ public class Notebook {
     }
 
     public void checkPrice() {
-        if (this.price < 600) {
+        if (this.price <= 500) {
             System.out.println("This notebook is cheap.");
-        } else if (this.price > 600 && this.price < 1500) {
+        } else if (this.price >= 1000 && this.price < 1500) {
             System.out.println("The price is good.");
         } else {
             System.out.println("This notebook is expensive.");
