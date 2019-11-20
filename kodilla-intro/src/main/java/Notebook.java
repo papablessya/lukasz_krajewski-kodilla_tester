@@ -43,5 +43,5 @@ public class Notebook {
         } else {
             System.out.println("This notebook is unique!");
         }
-    }
+}
 }
