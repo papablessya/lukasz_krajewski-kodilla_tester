@@ -6,6 +6,9 @@ public class LeapYear {
 
         this.leapYear = leapYear;
     }
-    
+    {
+        public boolean getLeapYear();
+            return this.leapYear;
+    }
 
 }
