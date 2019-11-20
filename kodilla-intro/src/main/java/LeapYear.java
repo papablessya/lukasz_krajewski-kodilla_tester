@@ -9,6 +9,10 @@ public class LeapYear {
     {
         public boolean getLeapYear();
             return this.leapYear;
+
     }
 
+    public int getLeapYear() {
+        if ()
+    }
 }
