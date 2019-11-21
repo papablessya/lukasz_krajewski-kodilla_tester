@@ -18,10 +18,7 @@ public class FirstClass  {
         oldNotebook.checkWeight();
         oldNotebook.checkYear();
     }
-        LeapYear leapYear = new LeapYear();
-        boolean leapYear = leapYear.getLeapYear();
-        System.out.println(leapYear);
+
 
     }
 
-}
