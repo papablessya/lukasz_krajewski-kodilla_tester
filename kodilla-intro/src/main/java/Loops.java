@@ -10,16 +10,13 @@ public class Loops {
         numbers[3] = 4;
         numbers[4] = 5;
 
-        int numberOfElements = numbers.length;
-        System.out.println(numberOfElements);
+        int sumNumbers = numbers.length;
+        System.out.println(sumNumbers);
 
-        public int sumNumbers(int[] numbers) {
-            int result = 0;
-            for (int i = 0; i < numbers.length; i++) {
-                result = result + numbers[i];
-            }
-            return result;
+
+
         }
-    }
-}
+            }
+
+
 
