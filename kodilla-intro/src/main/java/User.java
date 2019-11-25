@@ -2,40 +2,26 @@ public class User {
 
         String name;
         int age;
+        int sum;
 
-    public User (String name, int age){
-        this.age = age;
-        this.name = name;
-    }
+        public static void main(String[] args) {
 
-    public static void main(String[] args) {
+        User[] users = new User[5];
+        String[] names = new String[]{"John","Will","Ann","Merry","Sue"};
+        int[] ages = new int[]{41,55,29,64,24};
 
-        String[] userName = new String[5];
-        userName[0] = "John Doe";
-        userName[1] = "Ann Ban";
-        userName[2] = "Ricky Tricky";
-        userName[3] = "Cole Row";
-        userName[4] = "Sebastian Essex";
-
-        int[] userAge = new int[5];
-        userAge[0] = 32;
-        userAge[1] = 21;
-        userAge[2] = 15;
-        userAge[3] = 41;
-        userAge[4] = 29;
-
-
-        int NumberOfElements = userAge.length;
+        for (int i = 0; i < users.length);{
+            users[i] = new User();
+            users[i].name = names[i];
+            users[i].age = ages [i];
         }
-
-        public static int sumUserAge ( int[] userAge ){
-            int result = 0;
-            for (int i = 0; i < userAge.length; i++) {
-                result = result + userAge[i];
-            }
-            return result;
-
+            System.out.println("Users");
+        for (int i = 0; i < users.length; i++)
+            System.out.println(users[i].name+" " +users[i].age + "lat");
+        int sum = 0;
+        for (int i = 0; i < ages.length; i++) {
+        sum += ages[i];
         }
-
-    }
-
+        sum /= ages.length[i];
+        System.out.println(sum);}
+}
