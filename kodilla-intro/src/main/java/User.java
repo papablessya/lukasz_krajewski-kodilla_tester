@@ -1,6 +1,6 @@
 public class User {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
 
         String[] userName = new String[5];
@@ -17,15 +17,18 @@ public class User {
         userAge[3] = 41;
         userAge[4] = 29;
 
-        int numberOfElements = userAge.length;
-        System.out.println(numberOfElements);}
 
-        public static int sumUserAge(int[] userAge ) {
-         int result = 0;
-         for (int i = 0; i < userAge.length; i++ ) {
-             result = result + userAge[i];
-         }
-         return result;
+
         }
+
+        public static int sumUserAge ( int[] userAge ){
+            int result = 0;
+            for (int i = 0; i < userAge.length; i++) {
+                result = result + userAge[i];
+            }
+            return result;
+
+        }
+
     }
-}
+
