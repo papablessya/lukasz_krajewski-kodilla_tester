@@ -10,18 +10,19 @@ public class User {
         String[] names = new String[]{"John","Will","Ann","Merry","Sue"};
         int[] ages = new int[]{41,55,29,64,24};
 
-        for (int i = 0; i < users.length);{
+        for (int i = 0; i < users.length; i++) {
             users[i] = new User();
             users[i].name = names[i];
             users[i].age = ages [i];
         }
             System.out.println("Users");
         for (int i = 0; i < users.length; i++)
-            System.out.println(users[i].name+" " +users[i].age + "lat");
+            System.out.println(users[i].name + " " + users[i].age + "lat");
         int sum = 0;
         for (int i = 0; i < ages.length; i++) {
         sum += ages[i];
         }
-        sum /= ages.length[i];
-        System.out.println(sum);}
+        sum /= ages.length;
+        System.out.println(sum);
+        }
 }
