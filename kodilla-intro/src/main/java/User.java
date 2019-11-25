@@ -1,7 +1,14 @@
 public class User {
 
-    public static void main(String[] args) {
+        String name;
+        int age;
 
+    public User (String name, int age){
+        this.age = age;
+        this.name = name;
+    }
+
+    public static void main(String[] args) {
 
         String[] userName = new String[5];
         userName[0] = "John Doe";
@@ -18,7 +25,7 @@ public class User {
         userAge[4] = 29;
 
 
-
+        int NumberOfElements = userAge.length;
         }
 
         public static int sumUserAge ( int[] userAge ){
