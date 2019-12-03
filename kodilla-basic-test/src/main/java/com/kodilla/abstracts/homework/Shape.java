@@ -2,7 +2,9 @@ package com.kodilla.abstracts.homework;
 
 public abstract class Shape {
 
-    public abstract void givePole();
-
-    public abstract void giveObwod();
+    double sideA;
+    double sideB;
+    double sideC;
+    double heightH;
 }
+
