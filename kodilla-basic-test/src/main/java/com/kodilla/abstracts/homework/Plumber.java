@@ -5,14 +5,5 @@ public class Plumber extends Job {
         super(salary, responsibilities);
     }
 
-    public Plumber(int salary) {
-        super(2000);
-    }
 
-
-    @Override
-    public void displayResponsibilities() {
-
-
-    }
 }

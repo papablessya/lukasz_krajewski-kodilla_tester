@@ -6,11 +6,11 @@ public class Square extends Shape {
         super.sideA = a;
     }
 
-    double countArea() {
+    public double countArea() {
         return super.sideA * super.sideA;
     }
 
-    double countPerimeter() {
+    public double countPerimeter() {
         return super.sideA * 4;
     }
 }

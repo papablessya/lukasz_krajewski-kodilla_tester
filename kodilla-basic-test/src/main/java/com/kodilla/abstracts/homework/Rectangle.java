@@ -6,11 +6,11 @@ public class Rectangle extends Shape {
         super.sideB = b;
     }
 
-    double countArea() {
+    public double countArea() {
         return super.sideA * super.sideB;
     }
 
-    double countPerimeter() {
+    public double countPerimeter() {
         return super.sideA * 2 + super.sideB * 2;
     }
 }

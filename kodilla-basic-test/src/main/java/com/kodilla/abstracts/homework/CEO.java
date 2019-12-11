@@ -10,14 +10,4 @@ public class CEO extends Job {
         super(salary, responsibilities);
     }
 
-    public CEO(int salary) {
-        super(5000);
-    }
-
-
-    @Override
-    public void displayResponsibilities() {
-        return;
-
-    }
 }

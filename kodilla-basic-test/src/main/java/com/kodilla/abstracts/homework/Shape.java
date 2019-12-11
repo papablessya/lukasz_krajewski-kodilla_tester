@@ -6,5 +6,11 @@ public abstract class Shape {
     double sideB;
     double sideC;
     double heightH;
+
+    public abstract double countArea();
+
+    public abstract double countPerimeter();
+
+
 }
 

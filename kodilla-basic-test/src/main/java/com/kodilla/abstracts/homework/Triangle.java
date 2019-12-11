@@ -8,11 +8,11 @@ public class Triangle extends Shape {
         super.heightH = h;
     }
 
-    double countArea() {
-        return super.sideA + super.sideB + sideC;
+    public double countArea() {
+        return super.sideA * super.heightH / 2;
     }
 
-    double countPerimeter() {
-        return super.sideA * super.heightH / 2;
+    public double countPerimeter() {
+        return super.sideA + super.sideB + sideC;
     }
 }

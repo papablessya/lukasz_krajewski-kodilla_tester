@@ -5,14 +5,5 @@ public class Cook extends Job {
         super(salary, responsibilities);
     }
 
-    public Cook(int salary) {
-        super(1500);
-    }
 
-
-    @Override
-    public void displayResponsibilities() {
-        return;
-
-    }
 }

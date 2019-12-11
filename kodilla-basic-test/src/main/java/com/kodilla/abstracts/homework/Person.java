@@ -25,22 +25,13 @@ public class Person {
     }
 
     public static void main(String[] args) {
+        Person person1 = new Person("Kris",21, new Cook(2000,"preparing dishes"));
+        Person person2 = new Person("jose",32, new Plumber(2200,"fixing broken sinks"));
+        Person person3 = new Person("Marcus",41, new CEO(15000,"managing"));
 
-        Job cook = new Cook(1500, "preparing dishes ");
-        System.out.println("Kris" + " " + 21 + "y/o is responsible for" + " " + cook.getResponsibilities() );
-
-
-
-
-        Job plumber = new Plumber(2000,"fixing broken sinks");
-        System.out.println("Jose" + " " + 32 + "y/o is responsible for" + " " + plumber.getResponsibilities() );
-
-
-
-        Job ceo = new CEO(5000, "managing a company");
-        System.out.println("Marcus" + " " + 41 + "y/o is responsible for " + " "+ ceo.getResponsibilities());
-
-
+        System.out.println(person1.job.getResponsibilities());
+        System.out.println(person2.job.getResponsibilities());
+        System.out.println(person3.job.getResponsibilities());
     }
 }
 
