@@ -61,6 +61,36 @@ public class CashMachine {
         return cashOut;
 
     }
-}
+    public double getAverageIn(){
+        if(this.transactions.length == 0) {
+        return  0;
+        }
+        int cashInCount = 0;
+        for (int i = 0; i < this.transactions.length; i++){
+            if (this.transactions[i] > 0) {
+                cashInCount ++;
+            }
+        }
+        if (cashInCount == 0){
+            return 0;}
+        double cashInAverage = (double) getCashIn()/cashInCount;
+        return cashInAverage;
+    }
+    public double getAverageOut(){
+        if(this.transactions.length == 0) {
+            return 0;
+        }
+        int cashOutCount = 0;
+        for (int i = 0; i < this.transactions.length; i++){
+            if (this.transactions[i] < 0) {
+                cashOutCount ++;
+            }
+        }
+        if (cashOutCount == 0){
+            return 0;}
+        double cashOutAverage = (double) getCashOut()/cashOutCount;
+        return cashOutAverage;
+        }
+    }
 
 

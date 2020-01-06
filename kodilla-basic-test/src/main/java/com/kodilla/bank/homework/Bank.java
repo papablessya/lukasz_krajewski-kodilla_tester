@@ -49,6 +49,15 @@ public class Bank {
     public CashMachine[] getAtms() {
         return atms;
     }
+    public double getAverage() {
+        double totalTransactions = 0;
+        for (int i = 0; i < atms.length; i++){
+            totalTransactions = getCashIn() + getCashOut()/totalTransactions;
+        }
+        return totalTransactions;
+    }
+
+
 }
 
 
