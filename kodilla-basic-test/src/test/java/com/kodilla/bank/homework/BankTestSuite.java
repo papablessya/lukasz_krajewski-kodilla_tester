@@ -66,5 +66,17 @@ public class BankTestSuite {
         atms[2].add(3);
         assertEquals(3,bank.getAverage());
     }
+    @Test
+    public void testMixedAverageTransactions(){
+        Bank bank = new Bank();
+        CashMachine[] atms = bank.getAtms();
+        atms[0].add(2);
+        atms[0].add(-1);
+        atms[1].add(20);
+        atms[1].add(2);
+        atms[2].add(-4);
+        atms[2].add(-2);
+        assertEquals(2.83,bank.getAverage());
+    }
 
 }

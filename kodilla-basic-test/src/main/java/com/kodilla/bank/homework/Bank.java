@@ -52,13 +52,18 @@ public class Bank {
     public double getAverage() {
         double totalTransactions = 0;
         for (int i = 0; i < atms.length; i++){
-            totalTransactions = getCashIn() + getCashOut()/totalTransactions;
+            totalTransactions = atms[i].getCashOut() + atms[i].getCashIn();
         }
-        return totalTransactions;
+        if (totalTransactions == 0){
+            return 0;}
+        double transactionsAverage = (double) getBalance()/totalTransactions;
+        return transactionsAverage;
+    }
+
     }
 
 
-}
+
 
 
 
