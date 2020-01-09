@@ -11,10 +11,10 @@ public class Triangle implements Shape {
         this.hypotenuse = hypotenuse;
     }
     public double getArea() {
-        return width + height + hypotenuse;
+        return width * height / 2;
     }
 
     public double getPerimeter() {
-        return width * height / 2;
+        return width + height + hypotenuse;
     }
 }
