@@ -53,15 +53,12 @@ public class Bank {
         if(this.atms.length == 0){
             return 0;
         }
-        double totalTransactionsIn = 0;
+        double averageSum = 0;
         for (int i = 0; i < atms.length; i++){
-             { if (this.atms[i] < 0)
-                totalTransactionsIn ++;
+            averageSum += atms[i].getAverageIn();
             }
-        }
-        if (totalTransactionsIn == 0){
-            return 0;}
-        double transactionsInAverage = (double) getCashIn()/totalTransactionsIn;
+
+        double transactionsInAverage = averageSum/atms.length;
         return transactionsInAverage;
 
     }
@@ -69,19 +66,14 @@ public class Bank {
         if(this.atms.length == 0){
             return 0;
         }
-        double totalTransactionsOut = 0;
-        for (int i = 0; i > atms.length; i++){
-            {if (this.atms[i] > 0)
-                totalTransactionsOut ++;
-            }
+        double averageSum = 0;
+        for (int i = 0; i > atms.length; i++) {
+            averageSum += atms[i].getAverageOut();
         }
-        if (totalTransactionsOut == 0){
-            return 0;}
-        double transactionsOutAverage = (double) getCashIn()/totalTransactionsOut;
+        double transactionsOutAverage = averageSum/atms.length;
         return transactionsOutAverage;
 
     }
-
 }
 
 
