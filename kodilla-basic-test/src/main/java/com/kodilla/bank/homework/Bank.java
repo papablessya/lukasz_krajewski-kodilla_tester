@@ -49,18 +49,39 @@ public class Bank {
     public CashMachine[] getAtms() {
         return atms;
     }
-    public double getAverage() {
-        double totalTransactions = 0;
-        for (int i = 0; i < atms.length; i++){
-            totalTransactions = atms[i].getCashOut() + atms[i].getCashIn();
+    public double getAverageIn() {
+        if(this.atms.length == 0){
+            return 0;
         }
-        if (totalTransactions == 0){
+        double totalTransactionsIn = 0;
+        for (int i = 0; i < atms.length; i++){
+             { if (this.atms[i] < 0)
+                totalTransactionsIn ++;
+            }
+        }
+        if (totalTransactionsIn == 0){
             return 0;}
-        double transactionsAverage = (double) getBalance()/totalTransactions;
-        return transactionsAverage;
-    }
+        double transactionsInAverage = (double) getCashIn()/totalTransactionsIn;
+        return transactionsInAverage;
 
     }
+    public double getAverageOut() {
+        if(this.atms.length == 0){
+            return 0;
+        }
+        double totalTransactionsOut = 0;
+        for (int i = 0; i > atms.length; i++){
+            {if (this.atms[i] > 0)
+                totalTransactionsOut ++;
+            }
+        }
+        if (totalTransactionsOut == 0){
+            return 0;}
+        double transactionsOutAverage = (double) getCashIn()/totalTransactionsOut;
+        return transactionsOutAverage;
+
+    }
+}
 
 
 

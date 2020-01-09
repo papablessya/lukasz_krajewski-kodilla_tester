@@ -45,8 +45,8 @@ public class BankTestSuite {
         Bank bank = new Bank();
         CashMachine[] atms = bank.getAtms();
         atms[0].add(2);
-        atms[1].add(-1);
-        assertEquals(1.5,bank.getAverage());
+        atms[1].add(1);
+        assertEquals(1.5,bank.getAverageIn());
     }
     @Test
     public void testOnlyNegativeAverageTransactions(){
@@ -55,7 +55,7 @@ public class BankTestSuite {
         atms[0].add(-2);
         atms[1].add(-1);
         atms[2].add(-5);
-        assertEquals(-2.6,bank.getAverage());
+        assertEquals(-2.6,bank.getAverageIn());
     }
     @Test
     public void testOnlyPositiveAverageTransactions(){
@@ -64,7 +64,7 @@ public class BankTestSuite {
         atms[0].add(2);
         atms[1].add(4);
         atms[2].add(3);
-        assertEquals(3,bank.getAverage());
+        assertEquals(3,bank.getAverageIn());
     }
     @Test
     public void testMixedAverageTransactions(){
@@ -76,7 +76,7 @@ public class BankTestSuite {
         atms[1].add(2);
         atms[2].add(-4);
         atms[2].add(-2);
-        assertEquals(2.83,bank.getAverage());
+        assertEquals(2.83,bank.getAverageIn());
     }
 
 }
