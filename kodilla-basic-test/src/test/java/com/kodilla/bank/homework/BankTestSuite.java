@@ -55,7 +55,7 @@ public class BankTestSuite {
         atms[0].add(-2);
         atms[1].add(-1);
         atms[2].add(-5);
-        assertEquals(1,bank.getAverageIn() + bank.getAverageOut());
+        assertEquals(2.6,bank.getAverageIn() + bank.getAverageOut());
     }
     @Test
     public void testOnlyPositiveAverageTransactions(){

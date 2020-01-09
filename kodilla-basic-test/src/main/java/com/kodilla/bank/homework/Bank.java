@@ -67,8 +67,8 @@ public class Bank {
             return 0;
         }
         double averageSum = 0;
-        for (int i = 0; i > atms.length; i++) {
-            averageSum += atms[i].getAverageOut();
+        for (int i = 0; i < atms.length; i++) {
+            averageSum -= atms[i].getAverageOut();
         }
         double transactionsOutAverage = averageSum/atms.length;
         return transactionsOutAverage;
