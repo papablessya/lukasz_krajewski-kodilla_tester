@@ -10,7 +10,7 @@ public class CarUtils {
         System.out.println("---------------------");
         System.out.println("Car model: " + getCarName(car));
         System.out.println("Car speed: " + car.getSpeed());
-}
+    }
     private static String getCarName(Car car) {
         if (car instanceof Ford)
             return "Ford";

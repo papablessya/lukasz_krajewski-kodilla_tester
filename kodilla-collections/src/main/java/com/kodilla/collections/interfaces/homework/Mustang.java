@@ -6,6 +6,10 @@ public class Mustang implements Car {
     public Mustang(){
     }
 
+    public Mustang(int initSpeed) {
+        this.speed = initSpeed;
+    }
+
 
     @Override
     public int getSpeed() {

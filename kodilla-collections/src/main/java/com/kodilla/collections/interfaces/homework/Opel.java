@@ -7,6 +7,11 @@ public class Opel implements Car {
 
     }
 
+    public Opel(int initSpeed) {
+        this.speed = initSpeed;
+    }
+
+
     @Override
     public int getSpeed() {
         return this.speed;
