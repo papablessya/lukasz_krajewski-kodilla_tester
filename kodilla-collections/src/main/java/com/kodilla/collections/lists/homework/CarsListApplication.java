@@ -13,17 +13,20 @@ public class CarsListApplication {
     public static void main(String[] args) {
         List<Car> cars = new ArrayList<>();
         Ford ford = new Ford(210);
-        cars.remove(ford);
+        cars.add(ford);
         cars.add(new Mustang(260));
         cars.add(new Opel(140));
-
-        cars.remove(1);
-        cars.remove(ford);
-
-
         System.out.println(cars.size());
-        for(Car car: cars){
-            System.out.println(car.getSpeed());
+        for (Car car : cars) {
+            CarUtils.describeCar(car);
+        }
+            cars.remove(1);
+            cars.remove(ford);
+
+
+            System.out.println(cars.size());
+            for (Car car : cars) {
+                CarUtils.describeCar(car);
+            }
         }
     }
-}
