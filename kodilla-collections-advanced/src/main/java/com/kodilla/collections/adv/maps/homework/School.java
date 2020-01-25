@@ -4,22 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class School {
-        private List<Integer> school = new ArrayList<>();
+        private List<Integer> classes = new ArrayList<>();
 
         public School (int ... school){
             for(int schools : school)
-                this.school.add(schools);
+                this.classes.add(schools);
         }
 
     @Override
     public String toString() {
         return "School{" +
-                "school=" + school +
+                "school=" + classes +
                 '}';
     }
     public int getSum(){
             int sum = 0;
-            for(int school : school);
+            for(int cl : classes){
+                sum += cl;
+            }
             return sum;
 
     }
