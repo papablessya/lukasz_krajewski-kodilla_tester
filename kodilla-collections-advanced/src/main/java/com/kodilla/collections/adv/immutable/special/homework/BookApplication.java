@@ -3,12 +3,13 @@ package com.kodilla.collections.adv.immutable.special.homework;
 public class BookApplication {
     public static void main(String[] args) {
         BookManager bookManager = new BookManager();
-        System.out.println(bookManager.createBook("Cthulu","Lovecraft"));
-        System.out.println(bookManager.createBook("HP","J.K Rowling"));
-        System.out.println(bookManager.createBook("LOTR","R.J.J Tolkien"));
-        String x = "Cthulu";
-        String y = "Lotr";
-        System.out.println( x == y);
-        System.out.println(x.equals(y));
+        Book book1 =  bookManager.createBook("Cthulu","Lovecraft");
+        Book book2 =  bookManager.createBook("HP","J.K Rowling");
+        Book book3 =  bookManager.createBook("HP","J.K Rowling");
+        System.out.println(System.identityHashCode(book1));
+        System.out.println(System.identityHashCode(book2));
+        System.out.println(System.identityHashCode(book3));
+        System.out.println(book2 == book3);
+        System.out.println(book2.equals(book3));
     }
 }
