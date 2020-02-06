@@ -1,10 +1,11 @@
 package com.kodilla.collections.adv.exercises.homework;
 
-import java.util.HashSet;
-import java.util.Set;
+import com.kodilla.collections.adv.exercises.dictonary.EnglishWord;
+
+import java.util.*;
 
 public class FlightRepository {
-    public static void getFlightsTable() {
+    public static Set<Flight> getFlightsTable() {
         Set<Flight> flights = new HashSet<>();
         flights.add(new Flight("Sydney", "Tokyo"));
         flights.add(new Flight("Warsaw", "Stockholm"));
@@ -12,6 +13,7 @@ public class FlightRepository {
         flights.add(new Flight("Warsaw", "London"));
         flights.add(new Flight("Berlin", "Warsaw"));
 
+        return flights;
     }
 
 }
