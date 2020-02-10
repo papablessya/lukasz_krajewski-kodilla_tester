@@ -1,14 +1,15 @@
 package com.kodilla.optional.homework;
 
 import java.util.Objects;
+import java.util.Optional;
 
 public class Student {
     String name;
-    Teacher teacher;
+    Optional<Teacher> teacher;
 
     public Student(String name, Teacher teacher) {
         this.name = name;
-        this.teacher = teacher;
+        this.teacher = Optional.ofNullable(teacher);
     }
 
     @Override
@@ -37,7 +38,15 @@ public class Student {
         return name;
     }
 
-    public Teacher getTeacher() {
+    public Optional<Teacher> getTeacher() {
         return teacher;
+    }
+
+    public String getTeachersName() {
+        if (teacher.isPresent()) {
+            return teacher.get().getName();
+        } else {
+            return "<undifined>";
+        }
     }
 }

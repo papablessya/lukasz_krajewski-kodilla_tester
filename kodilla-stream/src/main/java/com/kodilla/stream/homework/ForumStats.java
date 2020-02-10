@@ -1,5 +1,6 @@
 package com.kodilla.stream.homework;
 
+import com.kodilla.stream.User;
 import com.kodilla.stream.UserRepository;
 
 public class ForumStats {
@@ -7,17 +8,17 @@ public class ForumStats {
         double avgMoreThanForty = UserRepository.getUsersList()
                 .stream()
                 .filter(u -> u.getAge() >= 40)
-                .mapToInt(u -> u.getNumberOfPosts())
+                .mapToInt(User::getNumberOfPosts)
                 .average()
-                .getAsDouble();
+                .orElse(0.00);
         System.out.println(avgMoreThanForty);
 
         double avgLessThanForty = UserRepository.getUsersList()
                 .stream()
                 .filter(u -> u.getAge() < 40)
-                .mapToInt(u -> u.getNumberOfPosts())
+                .mapToInt(User::getNumberOfPosts)
                 .average()
-                .getAsDouble();
+                .orElse(0.00);
         System.out.println(avgLessThanForty);
 
     }
