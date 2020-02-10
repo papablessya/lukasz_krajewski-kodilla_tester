@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class TaskManager {
     public static void main(String[] args) {
-        List<String> tasks = TaskRepository.getTasks()
+        List<LocalDate> tasks = TaskRepository.getTasks()
                 .stream()
                 .filter(u -> u.getDeadline().isAfter(LocalDate.now()))
                         .map(TaskManager::getTask)
@@ -16,7 +16,7 @@ public class TaskManager {
 
     }
 
-    public static String getTask(Task task) {
-        return task.getName();
+    public static LocalDate getTask(Task task) {
+        return task.getDeadline();
     }
 }
