@@ -8,7 +8,7 @@ public class TaskManager {
     public static void main(String[] args) {
         List<String> tasks = TaskRepository.getTasks()
                 .stream()
-                .filter(u -> u.getDeadline().equals(LocalDate.of(2020, 2, 10)))
+                .filter(u -> u.getDeadline().isAfter(LocalDate.now()))
                         .map(TaskManager::getTask)
                         .collect(Collectors.toList());
         System.out.println(tasks);
