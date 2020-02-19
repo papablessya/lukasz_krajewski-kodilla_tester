@@ -6,7 +6,8 @@ import java.util.regex.Pattern;
 public class UserValidator {
     public boolean validateUsername(String username) {
         if (null != username) {
-            return username.matches("^[a-zA-Z0-9._-]{3,}$\n");
+            String regex = "^[a-zA-Z0-9._-]{3,}$\n";
+            return username.matches(regex);
         }
         return false;
     }
