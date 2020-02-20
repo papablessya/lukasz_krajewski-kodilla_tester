@@ -1,4 +1,8 @@
 package com.kodilla.mockito.homework;
 
-public interface Location {
+public enum  Location {
+    WARSAW,
+    GDANSK,
+    KRAKOW
+
 }

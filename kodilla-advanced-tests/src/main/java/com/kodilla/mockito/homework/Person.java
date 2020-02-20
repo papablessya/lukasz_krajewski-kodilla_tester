@@ -1,6 +1,7 @@
 package com.kodilla.mockito.homework;
 
-public interface Person {
-    void receive(Alert alert);
-    void receive(Location location);
+public class Person {
+    void receive(String alert){
+        System.out.println("Alert");
+    }
 }
