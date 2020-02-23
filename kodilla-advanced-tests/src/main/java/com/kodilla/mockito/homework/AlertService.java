@@ -12,7 +12,6 @@ public class AlertService {
         personList.add(person);
     }
     public void removePerson(Person person,Location location){
-        locationAssignments.remove(location);
         List<Person> personList = locationAssignments.get(location);
         personList.remove(person);
     }

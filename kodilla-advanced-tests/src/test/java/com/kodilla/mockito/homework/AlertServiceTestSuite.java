@@ -32,9 +32,14 @@ class AlertServiceTestSuite {
 
     @Test
     public void personCanUnsubscribeFromSpecificLocation() {
-        alertService.addLocation(Location.GDANSK);
+        alertService.addPerson(person1,Location.GDANSK);
+        alertService.addPerson(person1,Location.WARSAW);
+        List<Person> result = alertService.locationAssignments.get(Location.WARSAW);
+        assertEquals(result.size(), 1);
 
-        List<Person> result = alertService.locationAssignments.get(Location.GDANSK);
+        alertService.removePerson(person1, Location.WARSAW);
+
+        result = alertService.locationAssignments.get(Location.WARSAW);
         assertEquals(result.size(), 0);
     }
 

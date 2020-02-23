@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.kodilla.execution_model.homework.Shop.getMin;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ShopTestSuite {
@@ -29,8 +30,7 @@ class ShopTestSuite {
 
     @Test
     public void shouldShowMinValueOrder() {
-        List<Order> minValueOrder = Shop.getMin(90.5);
-        Assertions.assertEquals(90.5, minValueOrder);
+//        double min = getMin(getMin(value))
 
 
     }
