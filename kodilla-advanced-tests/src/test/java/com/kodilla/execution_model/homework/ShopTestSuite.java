@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.kodilla.execution_model.homework.Shop.getMin;
+import static com.kodilla.execution_model.homework.Shop.getSum;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ShopTestSuite {
@@ -30,8 +31,10 @@ class ShopTestSuite {
 
     @Test
     public void shouldShowMinValueOrder() {
-//        double min = getMin(getMin(value))
-
+//        double min = getSum(value)
+//                .stream()
+//                .mapToDouble(Order::getValue)
+//                .min();
 
     }
 
@@ -48,7 +51,10 @@ class ShopTestSuite {
     }
     @Test
     public void sumValueOfAllOrders(){
-//        List<Order> sumValueOfOrders = Shop.getSum(Order::getValue);
+////        double sum = getSum(value)
+//                .stream()
+//                .mapToDouble(Order::getValue)
+//                .sum();
     }
 
 

@@ -86,8 +86,18 @@ class AlertServiceTestSuite {
 
     @Test
     public void shouldDeleteSpecificLocation() {
+        // given
+        alertService.addLocation(Location.WARSAW);
+        alertService.addPerson(person1, Location.WARSAW);
+        List<Person> result = alertService.locationAssignments.get(Location.WARSAW);
+        assertEquals(result.size(), 1);
+
+        // when
         alertService.removeLocation(Location.WARSAW);
 
+        // then
+        result = alertService.locationAssignments.get(null);
+        assertEquals(result.size(),1);
     }
 
 }
