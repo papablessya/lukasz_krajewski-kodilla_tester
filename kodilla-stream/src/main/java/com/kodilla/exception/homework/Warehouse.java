@@ -1,7 +1,6 @@
 package com.kodilla.exception.homework;
 
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 public class Warehouse {
@@ -21,7 +20,6 @@ public class Warehouse {
 
         return orderNr;
     }
-
 
 
 }
