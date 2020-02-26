@@ -8,8 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.kodilla.execution_model.homework.Shop.getMin;
-import static com.kodilla.execution_model.homework.Shop.getSum;
+import static com.kodilla.execution_model.homework.Shop.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ShopTestSuite {
@@ -31,17 +30,15 @@ class ShopTestSuite {
 
     @Test
     public void shouldShowMinValueOrder() {
-//        double min = getSum(value)
-//                .stream()
-//                .mapToDouble(Order::getValue)
-//                .min();
+        double min = getMin();
+        assertEquals(90.5,min);
 
     }
 
     @Test
     public void shouldShowMaxValueOrder() {
-        List<Order> maxValueOrder = Shop.getMax(90.5);
-        Assertions.assertEquals(90.5, maxValueOrder);
+        double max = getMax();
+        assertEquals(2890.5,max);
     }
 
     @Test
@@ -51,10 +48,8 @@ class ShopTestSuite {
     }
     @Test
     public void sumValueOfAllOrders(){
-////        double sum = getSum(value)
-//                .stream()
-//                .mapToDouble(Order::getValue)
-//                .sum();
+        double sum = getSum();
+        assertEquals(5161.1,sum);
     }
 
 

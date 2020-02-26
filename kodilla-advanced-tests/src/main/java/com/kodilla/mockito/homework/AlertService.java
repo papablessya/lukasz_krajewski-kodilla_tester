@@ -30,10 +30,11 @@ public class AlertService {
     }
 
     public void removeLocation(Location location) {
-        locationAssignments.remove(location, null);
+        locationAssignments.remove(location);
 
     }
-    public void unsubscribePerson(Person person, Location location){
+    public void unsubscribePerson(Person person){
+        locationAssignments.keySet().forEach(l -> removePerson(person, l));
 
     }
 

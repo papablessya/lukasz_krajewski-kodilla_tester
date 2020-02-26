@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -32,8 +33,8 @@ class AlertServiceTestSuite {
 
     @Test
     public void personCanUnsubscribeFromSpecificLocation() {
-        alertService.addPerson(person1,Location.GDANSK);
-        alertService.addPerson(person1,Location.WARSAW);
+        alertService.addPerson(person1, Location.GDANSK);
+        alertService.addPerson(person1, Location.WARSAW);
         List<Person> result = alertService.locationAssignments.get(Location.WARSAW);
         assertEquals(result.size(), 1);
 
@@ -47,16 +48,16 @@ class AlertServiceTestSuite {
     public void personCanUnsubscribeFromAllLocations() {
         // given
         alertService.addPerson(person1, Location.WARSAW);
-        List<Person> result = alertService.locationAssignments.get(Location.WARSAW);
-        assertEquals(result.size(), 1);
+        alertService.addPerson(person1, Location.GDANSK);
 
         // when
-        alertService.removePerson(person1, Location.WARSAW);
+        alertService.unsubscribePerson(person1);
 
         // then
-        result = alertService.locationAssignments.get(Location.WARSAW);
-        assertEquals(result.size(), 0);
-
+        List<Person> result  = alertService.locationAssignments.get(Location.WARSAW);
+        assertEquals(0,result.size());
+        result = alertService.locationAssignments.get(Location.GDANSK);
+        assertEquals(0, result.size());
     }
 
     @Test
@@ -88,16 +89,16 @@ class AlertServiceTestSuite {
     public void shouldDeleteSpecificLocation() {
         // given
         alertService.addLocation(Location.WARSAW);
-        alertService.addPerson(person1, Location.WARSAW);
-        List<Person> result = alertService.locationAssignments.get(Location.WARSAW);
+        Set<Location> result = alertService.locationAssignments.keySet();
         assertEquals(result.size(), 1);
 
         // when
         alertService.removeLocation(Location.WARSAW);
 
         // then
-        result = alertService.locationAssignments.get(null);
-        assertEquals(result.size(),1);
+
+        result = alertService.locationAssignments.keySet();
+        assertEquals(result.size(), 0);
     }
 
 }

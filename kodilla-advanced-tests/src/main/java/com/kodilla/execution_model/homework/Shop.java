@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Shop {
-    private List<Order> orders = new ArrayList<>();
+    private static List<Order> orders = new ArrayList<>();
 
     public void addOrder(Order order) {
         this.orders.add(order);
@@ -17,23 +17,20 @@ public class Shop {
                 .collect(Collectors.toList());
     }
 
-    public static List<Order> getMin(double value) {
-        double min = getMin(value)
+    public static double getMin() {
+        return orders
                 .stream()
                 .mapToDouble(Order::getValue)
                 .min()
                 .orElse(0.00);
-        return getMin(value);
     }
 
-    public static List<Order> getMax(double value) {
-        double max = getMax(value)
+    public static double getMax() {
+        return orders
                 .stream()
                 .mapToDouble(Order::getValue)
                 .max()
                 .orElse(0.00);
-        return getMax(value);
-
 
     }
 
@@ -41,11 +38,10 @@ public class Shop {
         return this.orders.size();
     }
 
-    public static List<Order> getSum(double value) {
-        double sum = getSum(value)
+    public static double getSum() {
+        return orders
                 .stream()
                 .mapToDouble(Order::getValue)
                 .sum();
-        return getSum(value);
     }
 }
